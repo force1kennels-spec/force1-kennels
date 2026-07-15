@@ -648,7 +648,7 @@ section {
   box-shadow: var(--shadow-lg);
 }
 .cat-img {
-  height: 220px;
+  height: 280px;
   overflow: hidden;
   position: relative;
 }
@@ -701,48 +701,6 @@ section {
   color: var(--ink-soft);
 }
 
-.gov-banner {
-  margin-top: 22px;
-  background: var(--navy);
-  border-radius: var(--radius-md);
-  padding: 34px 38px;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  flex-wrap: wrap;
-}
-.gov-banner .gicon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid var(--olive-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--olive-light);
-  flex-shrink: 0;
-}
-.gov-banner .gicon svg {
-  width: 22px;
-  height: 22px;
-}
-.gov-banner h4 {
-  color: var(--white);
-  font-size: 16.5px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.gov-banner p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14.5px;
-  max-width: 70ch;
-}
-
-.subblock-cta {
-  margin-top: 32px;
-}
-
 .priv-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -770,12 +728,11 @@ section {
 .priv-card:hover img {
   transform: scale(1.1);
 }
-.priv-grid .priv-card:nth-child(3) img {
-  transform: scale(1.38);
-  object-position: center 38%;
+.priv-grid .priv-card:nth-child(1) img {
+  object-position: center 15%;
 }
-.priv-grid .priv-card:nth-child(3):hover img {
-  transform: scale(1.48);
+.priv-grid .priv-card:nth-child(2) img {
+  object-position: center 10%;
 }
 .priv-grid .priv-card:nth-child(4) img {
   transform: scale(1.3);
@@ -1103,6 +1060,12 @@ section {
   max-width: 640px;
   margin: 0 auto 20px;
 }
+.testi-head .eyebrow {
+  justify-content: center;
+}
+.testi-head .eyebrow::before {
+  display: none;
+}
 .testi-head h2 {
   color: var(--white);
   margin-top: 16px;
@@ -1200,23 +1163,54 @@ section {
 .trust-grid {
   display: flex;
   justify-content: center;
-  gap: 44px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-  font-family: var(--font-sora), "Sora", sans-serif;
-  font-weight: 500;
+  gap: 14px;
+  text-align: left;
+}
+.trust-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--olive-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--olive-light);
+  flex-shrink: 0;
+}
+.trust-icon svg {
+  width: 19px;
+  height: 19px;
+}
+.trust-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
 }
 .trust-num {
-  font-size: 22px;
-  font-weight: 800;
+  font-family: var(--font-sora), "Sora", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
   color: var(--white);
   letter-spacing: -0.01em;
+}
+.trust-label {
+  font-family: var(--font-sora), "Sora", sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 2px;
+}
+.trust-label.solo {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0;
 }
 
 /* ---------- final cta ---------- */
@@ -1282,7 +1276,7 @@ section {
 }
 .foot-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
   gap: 50px;
   padding-bottom: 70px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1293,30 +1287,44 @@ section {
   color: rgba(255, 255, 255, 0.55);
   max-width: 32ch;
 }
-.foot-social {
-  display: flex;
+.foot-insta {
+  display: inline-flex;
+  align-items: center;
   gap: 12px;
   margin-top: 26px;
-}
-.foot-social a {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  padding: 11px 18px 11px 11px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 100px;
   transition:
     border-color 0.3s,
     background 0.3s;
 }
-.foot-social a:hover {
+.foot-insta:hover {
   border-color: var(--olive-light);
   background: rgba(154, 156, 135, 0.12);
 }
-.foot-social svg {
+.foot-insta .insta-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--olive-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.foot-insta .insta-icon svg {
   width: 16px;
   height: 16px;
+  color: var(--olive-light);
+}
+.foot-insta span:last-child {
+  font-family: var(--font-sora), "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.01em;
 }
 .foot-col h4 {
   font-family: var(--font-sora), "Sora", sans-serif;
@@ -1361,6 +1369,35 @@ section {
   font-size: 14.5px;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.5;
+}
+.ship-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 13px;
+}
+.ship-tag-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--olive-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ship-tag-icon svg {
+  width: 11px;
+  height: 11px;
+  color: var(--olive-light);
+}
+.ship-tag-label {
+  font-family: var(--font-sora), "Sora", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
 }
 .foot-bottom {
   display: flex;
@@ -1477,9 +1514,6 @@ section {
   }
   .consult-banner {
     padding: 36px;
-  }
-  .gov-banner {
-    padding: 26px;
   }
   .trust-grid {
     gap: 20px;

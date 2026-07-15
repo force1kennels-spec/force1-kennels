@@ -10,10 +10,11 @@ export const siteConfig = {
     "Elite K9 and companion dogs for global defence forces, security professionals and family homes. Certified premium bloodlines, professionally trained.",
   url: "https://force1kennels.in",
   email: "info@force1kennels.in",
-  phone: "+91-998877246",
-  address:
-    "Village Sundraan, PO Mubarikpur, Tehsil Derabassi, District SAS Nagar (Mohali), Punjab 140207, India",
+  phone: "+91-9988777246",
+  address: "SAS Nagar (Mohali), Punjab 140207, India",
   instagram: "https://instagram.com/force1kennels",
+  /** External contact form all "Talk to a Dog Expert" CTAs point to. */
+  contactUrl: "https://force1kennels.in/contact-us",
 };
 
 export const navLinks = [
@@ -28,6 +29,8 @@ export type WorkingDog = {
   alt: string;
   title: string;
   items: string[];
+  /** Overrides the default "center 20%" focal point for this card's photo. */
+  objectPosition?: string;
 };
 
 export const workingDogs: WorkingDog[] = [
@@ -36,6 +39,7 @@ export const workingDogs: WorkingDog[] = [
     alt: "Detection dog focused during a field exercise",
     title: "Detection dogs",
     items: ["Explosive detection", "Narcotics detection", "Anti-poaching operation"],
+    objectPosition: "center 12%",
   },
   {
     image: "/images/security-and-patrol-dog-training-with-handler.jpg",
@@ -60,6 +64,7 @@ export const workingDogs: WorkingDog[] = [
     alt: "Protection dog portrait",
     title: "Protection dogs",
     items: ["VIP protection", "Personal protection", "Estate & property protection"],
+    objectPosition: "center 38%",
   },
 ];
 
@@ -128,7 +133,7 @@ export const credibilityStats: CredItem[] = [
   },
   {
     numberText: "Government",
-    title: "Government & institutional trust",
+    title: "Trusted institutional partner",
     description: "Supporting defence, law enforcement, paramilitary, and government canine programmes with proven expertise.",
   },
   {
@@ -138,13 +143,13 @@ export const credibilityStats: CredItem[] = [
   },
   {
     numberText: "Global",
-    title: "Global placements",
+    title: "International placements",
     description: "Seamless worldwide placements with export documentation, health certification, and end-to-end client support.",
   },
 ];
 
 export type DifferenceItem = {
-  icon: "shield" | "heart" | "cert" | "target" | "match" | "support";
+  icon: "shield" | "dna" | "cert" | "target" | "match" | "support";
   title: string;
   description: string;
 };
@@ -156,7 +161,7 @@ export const differenceItems: DifferenceItem[] = [
     description: "Imported, carefully selected bloodlines with documented pedigrees, predictable temperament, and proven working ability.",
   },
   {
-    icon: "heart",
+    icon: "dna",
     title: "Ethical breeding",
     description: "Health-focused breeding practices that prioritise genetic integrity, sound structure, and long-term wellbeing.",
   },
@@ -188,6 +193,8 @@ export type Breed = {
   name: string;
   tagline: string;
   tags: string[];
+  /** Overrides the default center object-position for this card's photo. */
+  objectPosition?: string;
 };
 
 export const breeds: Breed[] = [
@@ -211,6 +218,7 @@ export const breeds: Breed[] = [
     name: "White German Shepherd",
     tagline: "Intelligence, elegance, and unwavering loyalty.",
     tags: ["Family Companion", "Estate Protection", "Show", "Guardian"],
+    objectPosition: "50% 35%",
   },
   {
     image: "/images/working-line-labrador-retriever-portrait.jpg",
@@ -225,6 +233,7 @@ export const breeds: Breed[] = [
     name: "Working Line Golden Retriever",
     tagline: "Gentle temperament with exceptional working ability.",
     tags: ["Therapy", "Detection", "Service", "Companion"],
+    objectPosition: "center 30%",
   },
 ];
 
@@ -241,13 +250,13 @@ export const testimonials: Testimonial[] = [
     role: "Family Protection Dog Owner",
   },
   {
-    text: "The quality of the dog, transparency throughout the process, and post-placement support were outstanding. Force 1 sets a benchmark for professionalism.",
+    text: "The quality of the dog, transparency throughout the process, and post-placement support were outstanding. Force 1 Kennels sets a benchmark for professionalism.",
     name: "Vikram Singh",
     role: "Security Consultant",
   },
   {
-    text: "We were looking for a reliable detection dog with the right temperament and working drive. Force 1 delivered beyond our expectations.",
-    name: "Aditya Verma",
+    text: "We were looking for a reliable detection dog with the right temperament and working drive. Force 1 Kennels delivered beyond our expectations.",
+    name: "James Whitfield",
     role: "Operations Head, Private Security Organisation",
   },
   {
@@ -257,28 +266,27 @@ export const testimonials: Testimonial[] = [
   },
   {
     text: "The entire experience, from selecting the right breed to ongoing guidance after bringing our dog home, was seamless and reassuring.",
-    name: "Priya Sharma",
+    name: "Sarah Mitchell",
     role: "First-Time Dog Owner",
   },
   {
-    text: "The pedigree, temperament, and confidence of our German Shepherd exceeded every expectation. We wouldn't hesitate to recommend Force 1.",
+    text: "The pedigree, temperament, and confidence of our German Shepherd exceeded every expectation. We wouldn't hesitate to recommend Force 1 Kennels.",
     name: "Arjun Malhotra",
     role: "Working Line German Shepherd Owner",
   },
 ];
 
-export const trustItems = [
-  { icon: "⭐", num: "4.9/5", label: "Average Client Rating" },
-  { icon: "🩺", num: "100%", label: "Health Screened Before Placement" },
-  { icon: "🌍", num: null, label: "Domestic & International Placements" },
-  { icon: "🏛", num: null, label: "Trusted by Defence & Security Professionals" },
-];
+export type TrustItem = {
+  icon: "star" | "health" | "globe" | "shield";
+  num?: string;
+  label: string;
+};
 
-export const footerExploreLinks = [
-  { label: "Professional Working Dogs", href: "#solutions" },
-  { label: "Private Collection", href: "#solutions-private" },
-  { label: "Breed Collection", href: "#breeds" },
-  { label: "The Force 1 Difference", href: "#difference" },
+export const trustItems: TrustItem[] = [
+  { icon: "star", num: "4.9/5", label: "Average Client Rating" },
+  { icon: "health", num: "100%", label: "Health Screened Before Placement" },
+  { icon: "globe", label: "Domestic & International Placements" },
+  { icon: "shield", label: "Trusted by Defence & Security Professionals" },
 ];
 
 export const footerCompanyLinks = [

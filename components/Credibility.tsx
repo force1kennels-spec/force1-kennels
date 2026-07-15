@@ -22,7 +22,7 @@ export default function Credibility() {
           <h2>Trusted by standards. Proven through experience.</h2>
           <div className="bold-line">
             Built on decades of expertise, recognised standards, and proven results, Force 1
-            delivers dogs trusted by professionals and families worldwide.
+            Kennels delivers dogs trusted by professionals and families worldwide.
           </div>
         </Reveal>
 

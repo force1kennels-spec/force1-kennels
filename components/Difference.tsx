@@ -8,9 +8,11 @@ const icons: Record<DifferenceItem["icon"], React.ReactNode> = {
       <path d="M9 12l2 2 4-4" />
     </svg>
   ),
-  heart: (
+  dna: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-      <path d="M12 21s-7-4.35-9.5-8.5C.7 9 2 5.5 5.2 5c2-.3 3.5.8 4.3 2 .8-1.2 2.3-2.3 4.3-2C17 5.5 18.3 9 16.5 12.5 14 16.65 12 21 12 21Z" />
+      <path d="M7 3c0 4 10 4 10 8s-10 4-10 8" />
+      <path d="M17 3c0 4-10 4-10 8s10 4 10 8" />
+      <path d="M8 7h8M8 17h8" />
     </svg>
   ),
   cert: (
@@ -44,10 +46,10 @@ export default function Difference() {
     <section className="difference section-pad" id="difference">
       <div className="container">
         <Reveal className="difference-lead">
-          <div className="eyebrow">The Force 1 Difference</div>
+          <div className="eyebrow">The Force 1 Kennels Difference</div>
           <div className="bold-line">
-            Every Force 1 dog is backed by proven bloodlines, ethical breeding, professional
-            development, and uncompromising quality standards.
+            Every Force 1 Kennels dog is backed by proven bloodlines, ethical breeding,
+            professional development, and uncompromising quality standards.
           </div>
         </Reveal>
 

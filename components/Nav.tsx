@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { navLinks } from "@/lib/data";
+import { navLinks, siteConfig } from "@/lib/data";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 export default function Nav() {
@@ -49,7 +49,7 @@ export default function Nav() {
           </div>
 
           <div className="nav-cta">
-            <Link href="#consult" className="btn btn-outline-dark btn-sm">
+            <Link href={siteConfig.contactUrl} className="btn btn-outline-dark btn-sm">
               Talk to a Dog Expert
             </Link>
             <button
@@ -75,7 +75,7 @@ export default function Nav() {
           </Link>
         ))}
         <Link
-          href="#consult"
+          href={siteConfig.contactUrl}
           className="btn btn-primary"
           style={{ marginTop: 10 }}
           onClick={() => setMenuOpen(false)}

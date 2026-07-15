@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { siteConfig, footerExploreLinks, footerCompanyLinks, footerCerts } from "@/lib/data";
+import { siteConfig, footerCompanyLinks, footerCerts } from "@/lib/data";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -22,31 +22,21 @@ export default function Footer() {
                 />
               </span>
               <span className="logo-text">
-                <b style={{ color: "#fff" }}>FORCE 1</b>
+                <b style={{ color: "#fff" }}>FORCE 1 KENNELS</b>
                 <span>ELITE K9 &amp; COMPANION DOGS</span>
               </span>
             </Link>
             <p>{siteConfig.description}</p>
-            <div className="foot-social">
-              <a href={siteConfig.instagram} aria-label="Instagram" target="_blank" rel="noreferrer noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+            <a href={siteConfig.instagram} className="foot-insta" target="_blank" rel="noreferrer noopener">
+              <span className="insta-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                   <rect x="3" y="3" width="18" height="18" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" />
                 </svg>
-              </a>
-            </div>
-          </div>
-
-          <div className="foot-col">
-            <h4>Explore</h4>
-            <ul>
-              {footerExploreLinks.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
+              </span>
+              <span>Explore our Instagram page</span>
+            </a>
           </div>
 
           <div className="foot-col">
@@ -67,7 +57,19 @@ export default function Footer() {
                 <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>{siteConfig.address}</span>
+              <div>
+                <span>{siteConfig.address}</span>
+                <br />
+                <span className="ship-tag">
+                  <span className="ship-tag-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9Z" />
+                    </svg>
+                  </span>
+                  <span className="ship-tag-label">Shipping Worldwide</span>
+                </span>
+              </div>
             </div>
             <div className="foot-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -91,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="foot-bottom">
-          <div>© {year} Force 1. All rights reserved.</div>
+          <div>© {year} Force 1 Kennels. All rights reserved.</div>
           <div className="foot-certs">
             {footerCerts.map((cert) => (
               <span key={cert}>{cert}</span>

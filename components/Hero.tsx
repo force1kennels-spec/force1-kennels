@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { siteConfig } from "@/lib/data";
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
       </div>
       <div className="hero-overlay" />
       <div className="hero-content">
-        <div className="hero-tag">Force 1</div>
+        <div className="hero-tag">Force 1 Kennels</div>
         <h1>
           Elite K9 and companion dogs for global defence forces, security professionals and family
           homes
@@ -32,7 +33,7 @@ export default function Hero() {
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </Link>
-          <Link href="#consult" className="btn btn-ghost">
+          <Link href={siteConfig.contactUrl} className="btn btn-ghost">
             Talk to a dog expert
           </Link>
         </div>

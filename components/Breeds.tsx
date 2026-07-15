@@ -24,7 +24,7 @@ export default function Breeds() {
                 alt={breed.alt}
                 fill
                 sizes="(max-width: 760px) 100vw, (max-width: 1100px) 33vw, 20vw"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", objectPosition: breed.objectPosition ?? "center" }}
                 loading="lazy"
               />
               <div className="breed-overlay" />
