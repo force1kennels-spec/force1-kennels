@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
-import { workingDogs, privateCollection, siteConfig } from "@/lib/data";
+import { workingDogs, privateCollection, workingDogsUsp } from "@/lib/data";
 
 const arrowIcon = (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -18,9 +18,9 @@ export default function Solutions() {
           <h2>Canine solutions for every requirement</h2>
           <p>
             Whether you&apos;re supporting critical operations, strengthening security, or welcoming
-            a trusted companion, Force 1 Kennels matches you with the right dog based on your
-            purpose, environment, and lifestyle. Every placement is guided by expert evaluation,
-            proven bloodlines, and professional standards.
+            a trusted companion, Force 1 Kennels matches you with the right dog based on your purpose,
+            environment, and lifestyle. Every placement is guided by expert evaluation, proven
+            bloodlines, and professional standards.
           </p>
         </Reveal>
 
@@ -34,20 +34,22 @@ export default function Solutions() {
                 and performance in demanding operational environments.
               </p>
             </div>
+            <div className="usp-tag">
+              <span className="dicon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </span>
+              <span>{workingDogsUsp}</span>
+            </div>
           </div>
 
           <div className="cat-grid stagger">
             {workingDogs.map((dog) => (
               <Reveal className="cat-card" key={dog.title}>
                 <div className="cat-img">
-                  <Image
-                    src={dog.image}
-                    alt={dog.alt}
-                    fill
-                    sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 25vw"
-                    style={{ objectFit: "cover", objectPosition: dog.objectPosition ?? "center 20%" }}
-                    loading="lazy"
-                  />
+                  <Image src={dog.image} alt={dog.alt} fill sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 25vw" style={{ objectFit: "cover", objectPosition: "center 20%" }} loading="lazy" />
                 </div>
                 <div className="cat-body">
                   <h4>{dog.title}</h4>
@@ -60,6 +62,28 @@ export default function Solutions() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal className="gov-banner">
+            <div className="gicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                <path d="M4 21h16M5 21V9l7-5 7 5v12M9 21v-6h6v6" />
+              </svg>
+            </div>
+            <div>
+              <h4>Government &amp; institutional programs</h4>
+              <p>
+                Professional canine solutions for defence forces, law enforcement, paramilitary
+                organisations, government agencies, and institutional requirements, with handler
+                training available where required.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal className="subblock-cta">
+            <Link href="/#breeds" className="text-link">
+              Explore working dogs {arrowIcon}
+            </Link>
+          </Reveal>
         </div>
 
         {/* Private collection */}
@@ -86,6 +110,12 @@ export default function Solutions() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal className="subblock-cta">
+            <Link href="/#breeds" className="text-link">
+              Discover the private collection {arrowIcon}
+            </Link>
+          </Reveal>
         </div>
 
         {/* Consultation */}
@@ -97,7 +127,7 @@ export default function Solutions() {
               experience, and objectives before recommending the ideal canine partner.
             </p>
           </div>
-          <Link href={siteConfig.contactUrl} className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             Talk to a dog expert {arrowIcon}
           </Link>
         </Reveal>

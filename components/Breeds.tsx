@@ -24,7 +24,7 @@ export default function Breeds() {
                 alt={breed.alt}
                 fill
                 sizes="(max-width: 760px) 100vw, (max-width: 1100px) 33vw, 20vw"
-                style={{ objectFit: "cover", objectPosition: breed.objectPosition ?? "center" }}
+                style={{ objectFit: "cover" }}
                 loading="lazy"
               />
               <div className="breed-overlay" />
@@ -49,7 +49,7 @@ export default function Breeds() {
             Beyond our core breeds, we help source carefully selected dogs through our trusted
             network of responsible breeders and international partners.
           </p>
-          <Link href="#contact" className="text-link">
+          <Link href="/contact" className="text-link">
             Enquire about a specific breed
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" />
