@@ -54,10 +54,25 @@ export default function ContactForm() {
 
     setStatus("sending");
     try {
-      // Replace with your actual form endpoint (Formspree, a serverless
-      // function, or your CRM's API) to deliver submissions to your inbox.
-      // await fetch('YOUR_FORM_ENDPOINT', { method: 'POST', body: new FormData(form) });
-      await new Promise((res) => setTimeout(res, 700));
+      const formData = new FormData(form);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          organization: formData.get("organization"),
+          country: formData.get("country"),
+          service: formData.get("service"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
       setStatus("success");
       form.reset();
       setErrors({});
