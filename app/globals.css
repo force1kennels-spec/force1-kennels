@@ -303,20 +303,17 @@ h4 {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 22px 0;
+  background: #ffffff;
+backdrop-filter: blur(14px);
+box-shadow: 0 4px 30px -10px rgba(3, 20, 37, 0.18);
+border-color: rgba(3, 20, 37, 0.08);
+   padding: 22px 0;
   transition:
     background 0.45s var(--ease),
     padding 0.45s var(--ease),
     box-shadow 0.45s var(--ease),
     border-color 0.45s var(--ease);
   border-bottom: 1px solid transparent;
-}
-.nav.scrolled {
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(14px);
-  padding: 14px 0;
-  box-shadow: 0 4px 30px -10px rgba(3, 20, 37, 0.18);
-  border-color: rgba(3, 20, 37, 0.08);
 }
 .nav-inner {
   display: flex;
@@ -328,7 +325,7 @@ h4 {
   align-items: center;
   gap: 12px;
   font-family: var(--font-sora), "Sora", sans-serif;
-  color: var(--white);
+  color: var(--navy);
 }
 .logo-badge {
   background: var(--white);
