@@ -31,8 +31,7 @@ export default function Nav() {
   const ctaHref = pathname === "/contact" ? "#enquiry" : "/contact";
 
   return (
-    <>
-      <nav className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
+  <nav className="nav scrolled" id="nav">
         <div className="container nav-inner">
           <Link href="/" className="logo" aria-label="Force 1 Kennels home">
             <Image
