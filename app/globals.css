@@ -79,8 +79,9 @@ h4 {
   text-transform: uppercase;
   color: var(--olive);
   display: flex;
-  justify-content: center;
-   align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
   gap: 10px;
 }
 .eyebrow::before {
@@ -622,12 +623,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-.section-head.center .eyebrow {
-  justify-content: center;
-}
-.section-head.center .eyebrow::before {
-  display: none;
 }
 
 /* ---------- solutions intro ---------- */
@@ -1227,6 +1222,12 @@ section {
   text-align: center;
   max-width: 640px;
   margin: 0 auto 20px;
+}
+.testi-head .eyebrow {
+  justify-content: center;
+}
+.testi-head .eyebrow::before {
+  display: none;
 }
 .testi-head h2 {
   color: var(--white);
